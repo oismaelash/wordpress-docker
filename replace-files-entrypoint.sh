@@ -26,4 +26,4 @@ download_and_replace "$HTACCESS_URL" "/var/www/html/.htaccess"
 download_and_replace "$INDEX_PHP_URL" "/var/www/html/index.php"
 download_and_replace "$PHP_INI_URL" "/usr/local/etc/php/php.ini"
 
-exec "$@"
+docker-entrypoint.sh apache2-foreground
